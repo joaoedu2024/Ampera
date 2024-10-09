@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f8;
+    color: #333;
+    overflow-x: hidden;
+    zoom: 90%;
+    background-image: url("../../IMAGENS/fundoazul.png  ");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.parallax-section {
+    background-image: url('https://example.com/parallax-image.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+}
+
+.parallax-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.parallax-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.parallax-section p {
+    font-size: 1.3rem;
+}
+
+/* Testemunhos */
+.testimonial-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-item p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.testimonial-item h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    transition: background 1s ease-in-out;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.6s ease;
+}
+
+.hero-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-section h2::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(90deg, #00c6ff, #007bff);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+    transition: opacity 0.6s ease;
+}
+
+.features-section {
+    padding: 80px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+    transition: background 1s ease-in-out;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.features-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: grid;
+    gap: 60px; /* Aumenta a distância entre os cards */
+    max-width: 1300px; /* Aumenta a largura máxima da grid */
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 40px; /* Aumenta o padding interno dos cards */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    width: 100%; /* Faz os cards se esticarem mais horizontalmente */
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+}
+
+.feature-item img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.extra-info {
+    margin-top: 20px;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.6s ease;
+}
+
+.feature-item:hover .extra-info {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.cta-section {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.cta-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 20px 50px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.cta-links {
+    font-size: 1rem;
+    color: #333;
+}
+
+.cta-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.cta-links a:hover {
+    text-decoration: underline;
+}
